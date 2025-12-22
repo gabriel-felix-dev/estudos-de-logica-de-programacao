@@ -2,7 +2,7 @@
 
 ## Anotações durante o estudo do treinamento em C# no Microsoft Learn e presquisas avulsas.
 
-- Caso após a instalação do .NET o comando dotnet --version não esteja funcionando, seguir os seguintes passos: 
+Caso após a instalação do .NET o comando `dotnet --version` não esteja funcionando, seguir os seguintes passos: 
 
     - Abrir a opções avançadas do computador usando os comando windows + R e digitar sysdm.cpl;
     - Ir na aba Avançado;
@@ -12,36 +12,38 @@
     - Caso haja, clique no primeiro caminho informado e depois clique em “Mover para Cima”;
     - Salve tudo e reinicie o PowerShell ou CMD;
 
-    - O comando dotnet --version não é executado porque o PoweShell ou CMD estão encontrando mais de um caminho para execução do dotnet.exe. Devido a isso ocorre um conflito na hora da utilização da aplicação, sendo necessário a correção do Path nas Configurações Avançadas de Sistema. 
+    - O comando **dotnet --version não** é executado porque o PoweShell ou CMD estão encontrando mais de um caminho para execução do dotnet.exe. Devido a isso ocorre um conflito na hora da utilização da aplicação, sendo necessário a correção do Path nas Configurações Avançadas de Sistema. 
 
-- Extensões para o VS Code: 
+Extensões para o VS Code: 
 
     - C# Dev Kit - microsoft.com
     - C# - microsoft.com
     - C# Extensions - JosKreativ
 
-- O C# funciona através do SDK .NET
+O C# funciona através do SDK .NET
 
-- Link para Download: https://dotnet.microsoft.com/pt-br/download
+Link para Download: https://dotnet.microsoft.com/pt-br/download
 
-- Comando para visualizar a versão do .NET instalado: dotnet --version / dotnet --list-sdks
+Comando para visualizar a versão do .NET instalado: `dotnet --version` / `dotnet --list-sdks`
 
-- C# é uma linguagem com Case Sensitive. A linguagem faz diferença entre letras maiúsculas e minúsculas. Exemplo: Console.WriteLine(); ≠ console.writeline();
+C# é uma linguagem com Case Sensitive. A linguagem faz diferença entre letras maiúsculas e minúsculas. Exemplo: Console.WriteLine(); ≠ console.writeline();
 
-- Para iniciar um novo console e criar um programa: dotnet new console;
+Para iniciar um novo console e criar um programa: `dotnet new console;`
 
-- Extensão do arquivo do C#: .cs;
+Extensão do arquivo do C#: .cs;
 
-- Comando de print na tela: Console.WriteLine() & Console.Write(). Diferença: WriteLine realiza uma quebra de linha para a próxima impressão na tela, já Write sem a presença do Line não faz essa quebra de linha. 
+Comando de print na tela: Console.WriteLine() & Console.Write(). 
 
-- Comando para execução de arquivo por meio do terminal: dotnet run;
+    - Diferença: WriteLine realiza uma quebra de linha para a próxima impressão na tela, já Write sem a presença do Line não faz essa quebra de linha. 
 
-- Comando para a coleta de uma informação que o usuário digitar: Console.ReadLine()
+Comando para execução de arquivo por meio do terminal: `dotnet run;`
 
-- O Console.ReadLine() vai retornar uma informação em formato de String. Para converter uma String para algum tipo de valor numérico, usa-se o método Parse. Forma de aplicação: 
+Comando para a coleta de uma informação que o usuário digitar: `Console.ReadLine()`
 
-`nome-da-var = int.Parse(Console.ReadLine());`
+O **Console.ReadLine()** vai retornar uma informação em formato de String. Para converter uma String para algum tipo de valor numérico, usa-se o método Parse. Forma de aplicação: 
 
-- A partir do console, a variável (nome-da-var) vai receber uma informação (ReadLine()) que será transformada em um tipo inteiro (int.Parse()).
+    - `nome-da-var = int.Parse(Console.ReadLine());`
 
-Aspas simples criam um caractere literal, um *char literal*. Ela vai aceitar apenas *um único* caractere. Já as aspas duplas criam um um dado do tipo *string*. Um valor literal é algo que não sofre altração, é um valor constante.
+A partir do console, a variável (nome-da-var) vai receber uma informação (ReadLine()) que será transformada em um tipo inteiro (int.Parse()).
+
+Aspas simples criam um caractere literal, um **char literal**. Ela vai aceitar apenas **um único** caractere. Já as aspas duplas criam um um dado do tipo *string*. Um valor literal é algo que não sofre altração, é um valor constante.
