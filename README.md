@@ -1,6 +1,8 @@
-# Anotações sobre a linguagem de programação C#.
+# Anotações sobre a linguagem de programação C#
 
-## Anotações durante o estudo do treinamento em C# no Microsoft Learn e presquisas avulsas.
+## Anotações durante o estudo do treinamento em C# no Microsoft Learn e presquisas avulsas
+
+### Instalação e configuração do ambiente de desenvolvimento
 
 O C# funciona através do SDK .NET
 
@@ -26,36 +28,120 @@ Extensões para o VS Code:
 - C# Dev Kit - microsoft.com
 - C# - microsoft.com
 - C# Extensions - JosKreativ
+- vscode-solution-explorer
 
 C# é uma linguagem com Case Sensitive. A linguagem faz diferença entre letras maiúsculas e minúsculas. Exemplo: Console.WriteLine(); ≠ console.writeline();
 
+### Principais comandos
+
 Para iniciar um novo console e criar um programa: 
 
-`dotnet new console;`
+`dotnet new console -o nome-da-pasta -n estudo;`
+
+- -o cria uma pasta com um nome específico;
+- -n nomeia o arquivo .csproj;
+
+Comando para criar o git ignore das pastas bin e obj:
+
+`dotnet new gitignore`
+
+Alterar o arquivo .csproj e alterar a linha 7, tag `<Nullable>` para disable para permitir valores nulos.
+
+Comando para compilação: 
+
+`dotnet build nome-arquivo.csproj`
 
 Extensão do arquivo do C#: .cs;
 
-Comando de print na tela: 
+### Execução do Debug
+
+**Necessário ter instalado a extensão vscode-solution-explorer**
+
+Sequência para executar apenas uma área do código por meio do debug do VS Code: 
+
+- Clicar ao lado do número das linhas para deixar uma marcação com uma bola vermelha. Essa marcação delimiratá até aonde o código será lido;
+- Clicar no espaço vazio do explorador de arquivos;
+- Apertar **F5**, selecionar a linguem **C#** e depois selecionar o projeto que está sendo trabalhado, ele terá o mesmo nome do arquivo .csproj;
+
+Comando para execução de arquivo por meio do terminal: 
+
+`dotnet run;`
+
+### Comando de print na tela: 
 
 `Console.WriteLine()` & `Console.Write()`
 
-- Diferença: **WriteLine** realiza uma quebra de linha para a próxima impressão na tela, já **Write** sem a presença do Line não faz essa quebra de linha. 
-
-Comando para execução de arquivo por meio do terminal: `dotnet run;`
+Diferença: **WriteLine** realiza uma quebra de linha para a próxima impressão na tela, já **Write** sem a presença do Line não faz essa quebra de linha. 
 
 ### Literais de caracteres: 
 
 Aspas simples criam um caractere literal, um **char literal**. Ela vai aceitar apenas **um único** caractere. Já as aspas duplas criam um um dado do tipo **string**. Um valor literal é algo que não sofre altração, é um valor constante. 
 
-Para a impressão de um caractere literal usa-se o comando: 
+Para a impressão de um caractere, tipo **char** literal usa-se o comando abaixo com aspas simples: 
 
-`Console.WriteLine('b')`
+`Console.WriteLine('b');`
 
-### Literais interiros
+Para a impressão de texto do tipo **string**, usa-se o comando abaixo com as aspas duplas:
 
-Comando para a coleta de uma informação que o usuário digitar: 
+`Console.WriteLine("Hello, World");`
 
-`Console.ReadLine()`
+## Valores literias e tipos de variaveis
+
+### Literais interiros:
+
+Comando para exibição de um valor interiro literal do tipo inteiro (**int**):
+
+`Console.WriteLine(123);`
+
+### Literais de ponto flutuante: 
+
+O C# da três tipos de variaveis para valores decimais: **float**, **double** e **decimal**. Cada tem um grau de precisão diferente:
+
+- Float: 6-9 digitos
+- double: 15-17 digitos
+- decimal: 28-29 digitos
+
+Para criar um float literal, usa-se a letra **F** após o número. Pode ser usado tanto o minúsculo como maiúsculo:
+
+`Console.WriteLine(0.25F);`
+
+Para criar um double literal basta inserir o número decimal:
+
+`Console.WriteLine(2.625);`
+
+Para criar um decimal literal, usa-se a letra **M** após o número. Pode ser usado como maiúsculo ou minúsculo: 
+
+`Console.WriteLine(12.39816m);`
+
+### Literais boolianos: 
+
+Literais booleanos são representados por **true** ou **false**. O tipo é o bool, abreviação para Boolean. Para a impressão em tela:
+
+`Console.WriteLine(true);`
+`Console.WriteLine(false);`
+
+## Declaração de uma variavel
+
+Para se declarar um variavel, primeiro se define o tipo dela e depois nome que ela terá: 
+
+`string nomeUsuario`
+`int notaSemestral`
+`bool validacaoDeUsuario`
+
+## Definicção de valor em uma variável
+
+Para atribuir um valor à uma variável, deve-se declarar ela e após isso informar o valor que ela armazenará: 
+
+`string primeiroNome;`
+`priemiroNome = "Gabriel";`
+
+Para realizar a impressão na tela basta colocar o nome da variável no metódo WriteLine:
+
+`Console.WriteLine(primeiroNome);`
+
+
+
+`Console.ReadLine();`
 
 O **Console.ReadLine()** vai retornar uma informação em formato de String. Para converter uma String para algum tipo de valor numérico, usa-se o método Parse. Forma de aplicação: 
 
