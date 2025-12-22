@@ -43,3 +43,5 @@
 - <nome-da-var> = int.Parse(Console.ReadLine()); 
 
 - A partir do console, a variável (nome-da-var) vai receber uma informação (ReadLine()) que será transformada em um tipo inteiro (int.Parse()).
+
+- Aspas simples criam um caractere literal, um *char literal*. Ela vai aceitar apenas *um único* caractere. Já as aspas duplas criam um um dado do tipo *string*. Um valor literal é algo que não sofre altração, é um valor constante.
