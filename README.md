@@ -139,6 +139,20 @@ Para realizar a impressão na tela basta colocar o nome da variável no metódo 
 
 `Console.WriteLine(primeiroNome);`
 
+## Interpolação e formatação de impressão:
+
+`\n` => Quebra de linha.
+`\t` => Gera um "tab" entre um caractere e outro.
+`\"texto\"` => Possibilita deixar os caracteres entre aspas.
+`\\C:Users\Gabriel\Documents\\` => Permite imprimir na tela um caminho de pastas do computador.
+
+Exemplo de uso: 
+
+```Console.WriteLine("Generating invoices for customer \"Contoso Corp\" ... \n");
+Console.WriteLine("Invoice: 1021 \t \t Complete!");
+Console.WriteLine("Invoice: 1022 \t\t Complete!");
+Console.Write("\nOutpu Directory: \t");
+```
 
 
 `Console.ReadLine();`
