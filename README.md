@@ -153,12 +153,42 @@ Console.WriteLine("Invoice: 1021 \t \t Complete!");
 Console.WriteLine("Invoice: 1022 \t\t Complete!");
 Console.Write("\nOutpu Directory: \t");
 ```
+ 
+=> O `@` permite quabra de texto entre linhas e permite usar o caractere `\` sem a necessidade do escape `\\`.
 
+```Console.WriteLine(@"Texto para 
+impressão")
+```
+
+A interpolação de variáveis ser dá por meio do caractere `$`:
+
+```string nome = "Gabriel";
+Console.WriteLine($"Olá, {nome}");
+```
+
+A interpolação com o caractere `$` pode ser feita também em variáveis: 
+
+```string nome = "Lucas";
+string mensagem = $"Olá, {nome}!";
+Console.WriteLine(mensagem);
+```
+Os caractestes `@` e `$` podem ser usados juntos: 
+
+```string nomeProjeto = "primeiro-projeto";
+Console.WriteLine($@"Local de armazenamento do projeto:
+    C:\Output\{nomeProjeto}\Data");
+```
+
+## Captura de informação
+
+O `ReadLine()` vai retornar uma informação em formato de `string`:
 
 `Console.ReadLine();`
+ 
+## Captura e converção de uma informação
 
-O **Console.ReadLine()** vai retornar uma informação em formato de String. Para converter uma String para algum tipo de valor numérico, usa-se o método Parse. Forma de aplicação: 
+A partir do console, o `ReadLine()` irá capturar uma informação escrita pelo usuário, em seguida essa informação será convertida em um tipo `int` através do `Parse()` e no final sera armazenada na variável **valorInteiro**.
 
-`nome-da-var = int.Parse(Console.ReadLine());`
-
-A partir do console, a variável (nome-da-var) vai receber uma informação (ReadLine()) que será transformada em um tipo inteiro (int.Parse()).
+```Console.WriteLine("Digite um valor interio: ")
+int valorInterio = int.Parse(Console.ReadLine());
+```
